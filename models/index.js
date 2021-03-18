@@ -10,8 +10,8 @@ const ProductTag = require('./ProductTag');
 
 Category.hasMany(Product, {
   foreignKey: 'category_id',
-  as: 'productCategory'
-  // onDelete: 'SET NULL'
+  as: 'productCategory',
+  onDelete: 'SET NULL',
 })
 
 
