@@ -12,12 +12,18 @@ Category.hasMany(Product, {
   foreignKey: 'category_id',
   as: 'productCategory',
   onDelete: 'SET NULL',
+  constraints: false, 
+  // allowNull:true, 
+  // defaultValue:null
 });
 
 // Products have one Category
 Product.hasOne(Category, {
   foreignKey: 'id',
   as: 'productCategory',
+  constraints: false, 
+  // allowNull:true, 
+ // defaultValue: null
 })
 
 
@@ -25,12 +31,26 @@ Product.hasOne(Category, {
 Product.belongsToMany(Tag, {
   through: {
     model: ProductTag,
-    unique: false
+    foreignKey: 'tag_id',
+    foreignKey: 'product_id',
+    unique: false,
+    // onDelete: 'CASCADE',
   },
   as: 'productTags'
 });
 
+// 
+
 // Tags belongToMany Products (through ProductTag)
+
+Tag.belongsToMany(Product, {
+  through: {
+    model: ProductTag,
+    unique: false,
+    // onDelete: 'CASCADE',
+  },
+  as: 'productTags'
+});
 
 module.exports = {
   Product,
