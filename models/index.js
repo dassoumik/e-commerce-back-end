@@ -12,6 +12,12 @@ Category.hasMany(Product, {
   foreignKey: 'category_id',
   as: 'productCategory',
   onDelete: 'SET NULL',
+});
+
+// Products have one Category
+Product.hasOne(Category, {
+  foreignKey: 'id',
+  as: 'productCategory',
 })
 
 
