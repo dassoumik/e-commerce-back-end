@@ -33,6 +33,10 @@ This ia an app that builds the back end for an e-commerce site.<br>
 ```
 <br>
 
+
+[Database table layouts and relations - Link](assets/table-layout-n-relations.md)
+
+
 Starting the server and establishing and seeding the database can be reffered from the 
 demonstration video, given below.
 	
@@ -41,15 +45,18 @@ demonstration video, given below.
 <br>
 
   ## Usage <br>
-```md
+
 A manager at an internet retail company wants a back end for my e-commerce website that uses the latest technologies so that his company can compete with other e-commerce companies.
-``` 
+
 <br>
 
 **App Demonstration Video** 
 
 [youtube - Demo Video](https://www.youtube.com/watch?v=LLzUIu6HktY)
+
   <br>
+
+
 
   ## License <br>
   This app follow **MIT** licensing rules. Please check below link for more details.
